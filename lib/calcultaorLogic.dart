@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'calcultaorLogic.dart';
 
 class Logic{
   double firstNumber = 0;
