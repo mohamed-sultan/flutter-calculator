@@ -15,9 +15,59 @@ class Logic{
      operation = '';
   }
 
+  void add (){
+    pareNumber();
+    performOperation('+');
+  }
+
+  void sub (){
+    pareNumber();
+    performOperation('-');
+  }
+
+  void multi (){
+    pareNumber();
+    performOperation('*');
+  }
+
+  void div (){
+    pareNumber();
+    performOperation('/');
+  }
+void percentage(){
+    firstResult = firstNumber/100;
+    finalResult = firstResult;
+}
+
+void negative(){
+    firstResult.toString().startsWith('-')
+        ? firstResult = firstResult.toString().substring(1)
+        : firstResult = '-' + firstResult.toString() ;
+    firstResult = firstResult;
+}
+void decimal (){
+    if(!firstResult.toString().contains('.')){
+      firstResult = firstResult.toString() + '.0';
+    }
+    finalResult = firstResult;
+}
   void setNumber(number){
     firstResult+=number ;
     finalResult = firstResult;
+  }
+  void execute(){
+    if(operation =='+'){
+      addCalculation();
+    }
+    if(operation =='-'){
+      subCalculation();
+    }
+    if(operation =='/'){
+      divCalculation();
+    }
+    if(operation =='*'){
+      multCalculation();
+    }
   }
   void pareNumber (){
     if(firstNumber==0){
